@@ -1,159 +1,156 @@
-/* General Styles */
+/* General Styling */
 body {
-    background: linear-gradient(to right,#3b78f2,#efa00c);
-    text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Navigation Bar */
 header {
-    background-color: #fff;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 50px;
+    transition: 0.3s;
 }
 
-.nav-links {
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .logo span {
+    color: #f39c12;
+}
+
+nav ul {
     list-style: none;
     display: flex;
 }
 
-.nav-links li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-.nav-links a {
+nav ul li a {
     text-decoration: none;
+    color: white;
     font-size: 18px;
-    color: #333;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #007bff;
+nav ul li a:hover {
+    color: #f39c12;
 }
 
-/* Mobile Navigation */
-.menu-icon {
+.hamburger {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
+    color: white;
     cursor: pointer;
 }
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px;
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-/* Buttons */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: #fff;
+    background: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: #e67e22;
 }
 
-/* Services Section */
+/* Services */
 .service-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
-.service {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.service img {
-    width: 150px;
-    height: 150px;
+.service-box {
+    background: white;
+    padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
-.service:hover {
-    transform: scale(1.05);
+.service-box:hover {
+    transform: translateY(-10px);
 }
 
-/* Contact Section */
-.contact-btn {
-    background: linear-gradient(to right,#3bf24d,#ef3d0c);
-    border: none;
-    padding: 15px 30px;
-    font-size: 20px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.contact-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
+/* Menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    text-align: center;
 }
 
-.social-icons a {
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #333;
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
     color: white;
-    font-size: 24px;
-    border-radius: 50%;
-    transition: background 0.3s, transform 0.3s;
 }
 
-.social-icons a:hover {
-    background: #0077b5;
-    transform: scale(1.1);
-}
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
     .nav-links {
         display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
     }
 }

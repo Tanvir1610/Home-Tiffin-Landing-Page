@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Tiffin Landing Page</title>
+    <title>Home Tiffin Service</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <script>
         window.onload = function () {
             document.querySelector('#I1').classList.add('loaded');
         };
-
-        function toggleMenu() {
-            document.querySelector(".nav-links").classList.toggle("active");
-        }
     </script>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
     <header>
-        <h1>Welcome to Home Tiffin</h1>
+        <div class="logo">Tiffin<span>Service</span></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="hamburger">&#9776;</div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <button class="btn"><a href="#Social">Get Started</a></button>
+        <h1>Delicious Homemade Meals, Delivered!</h1>
+        <p>Fresh, healthy, and affordable tiffin service at your doorstep.</p>
+        <a href="#services" class="btn">Explore Services</a>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Us</h2>
-        <img src="Indian.jpg" alt="Tiffin Service" id="I1">
-        <p>Welcome to Home Tiffin Service! We provide delicious, homemade meals delivered straight to your door.</p>
+        <p>We provide homemade meals with a perfect balance of taste and nutrition.</p>
+        <img src="Indian.jpg" alt="Tiffin Meal" id="I1">
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
         <div class="service-container">
-            <div class="service">
-                <img src="Delivery.jpg" alt="Delivery">
-                <h3>#1 Delivery Service</h3>
+            <div class="service-box">
+                <img src="Delivery.jpg" alt="Delivery Service">
+                <h3>Fast Delivery</h3>
+                <p>Get your meal on time, every time!</p>
             </div>
-            <div class="service">
-                <img src="Tiffin.jpg" alt="Tiffin">
-                <h3>#2 Tiffin Service</h3>
+            <div class="service-box">
+                <img src="Tiffin.jpg" alt="Tiffin Service">
+                <h3>Tiffin Subscription</h3>
+                <p>Choose from daily, weekly, or monthly plans.</p>
             </div>
-            <div class="service">
-                <img src="Meal.jpg" alt="Meal">
-                <h3>#3 Tiffin Meal Service</h3>
+            <div class="service-box">
+                <img src="Meal.jpg" alt="Healthy Meal">
+                <h3>Healthy Meals</h3>
+                <p>Balanced nutrition with fresh ingredients.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Next Step?</h2>
-        <p>Contact us and we will get back to you as soon as possible.</p>
-        <button class="contact-btn" onclick="window.location.href='mailto:vhoratanvir1610@gmail.com'">Contact Us</button>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="Veg.jpg" alt="Vegetable Biryani">
+                <h3>Vegetable Biryani</h3>
+                <span>$8</span>
+            </div>
+            <div class="menu-item">
+                <img src="Butter.jpg" alt="Butter Chicken">
+                <h3>Butter Chicken</h3>
+                <span>$10</span>
+            </div>
+            <div class="menu-item">
+                <img src="Panner.jpg" alt="Paneer Tikka">
+                <h3>Paneer Tikka Masala</h3>
+                <span>$9</span>
+            </div>
+        </div>
     </section>
 
-    <!-- Social Media Links -->
-    <h3 id="Social">Follow Us</h3>
-    <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f">F</a>
-        <a href="https://x.com" target="_blank" class="fab fa-twitter">T</a>
-        <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram">I</a>
-        <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in">L</a>
-    </div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For orders & inquiries, reach us via email.</p>
+        <button class="btn" onclick="window.location.href='mailto:vhoratanvir1610@gmail.com'">Email Us</button>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Home Tiffin. All rights reserved.</p>
+        <p>&copy; 2024 Home Tiffin Service. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

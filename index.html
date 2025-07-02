@@ -1,96 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Tiffin Service</title>
+    <title>HomeTiffin - Delicious Home-Style Tiffin Service</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <script>
-        window.onload = function () {
-            document.querySelector('#I1').classList.add('loaded');
-        };
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="logo">Tiffin<span>Service</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">&#9776;</div>
-        </nav>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1><span>Home</span>Tiffin</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#how-to-order">How to Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#order-form" class="btn btn-outline">
+                        <i class="fas fa-calendar-alt"></i> Order Online
+                    </a>
+                    <a href="tel:+919601682609" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Delicious Homemade Meals, Delivered!</h1>
-        <p>Fresh, healthy, and affordable tiffin service at your doorstep.</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#menu" class="mobile-link">Menu</a></li>
+            <li><a href="#how-to-order" class="mobile-link">How to Order</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+            <li><a href="#order-form" class="mobile-link">Order Online</a></li>
+            <li><a href="tel:+919601682609" class="mobile-link">Call to Order</a></li>
+        </ul>
+    </div>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide homemade meals with a perfect balance of taste and nutrition.</p>
-        <img src="Indian.jpg" alt="Tiffin Meal" id="I1">
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <img src="Delivery.jpg" alt="Delivery Service">
-                <h3>Fast Delivery</h3>
-                <p>Get your meal on time, every time!</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Delicious Home-Style Tiffin Service</h1>
+                <p class="fade-in">Enjoy fresh, homemade meals every day with our tiffin service. We offer a variety of dishes that change daily.</p>
+                <div class="hero-buttons fade-in">
+                    <a href="#menu" class="btn btn-primary">
+                        View Weekly Menu <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#order-form" class="btn btn-outline">Order Online</a>
+                </div>
             </div>
-            <div class="service-box">
-                <img src="Tiffin.jpg" alt="Tiffin Service">
-                <h3>Tiffin Subscription</h3>
-                <p>Choose from daily, weekly, or monthly plans.</p>
-            </div>
-            <div class="service-box">
-                <img src="Meal.jpg" alt="Healthy Meal">
-                <h3>Healthy Meals</h3>
-                <p>Balanced nutrition with fresh ingredients.</p>
+            <div class="hero-image fade-in">
+                <div class="dish-3d">
+                    <img src="https://images.unsplash.com/photo-1596797038530-2c107aa4e68f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Delicious tiffin meals">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="Veg.jpg" alt="Vegetable Biryani">
-                <h3>Vegetable Biryani</h3>
-                <span>$8</span>
+    <!-- Weekly Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Weekly Menu</h2>
+                <p class="fade-in">Our menu changes daily to provide variety and nutrition. Check out what we offer each day of the week.</p>
             </div>
-            <div class="menu-item">
-                <img src="Butter.jpg" alt="Butter Chicken">
-                <h3>Butter Chicken</h3>
-                <span>$10</span>
+            <div class="menu-grid">
+                <!-- Monday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Monday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1596560548464-f010549b84d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Vegetable Pulao">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Vegetable Pulao</li>
+                        </ul>
+                        <h3>Extras</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Chaas</li>
+                        </ul>
+                        <div class="price">₹100 per person</div>
+                    </div>
+                </div>
+
+                <!-- Tuesday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Tuesday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Paneer Sak">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Paneer Sak</li>
+                            <li><i class="fas fa-chevron-right"></i> Sav Gathiya Sak</li>
+                            <li><i class="fas fa-chevron-right"></i> Paratha (5)</li>
+                        </ul>
+                        <div class="price">₹250 per person</div>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Wednesday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1630409351217-bc4fa6422075?q=80&w=2033&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Chole Bhature">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Chole Bhature (2)</li>
+                            <li><i class="fas fa-chevron-right"></i> Bataka ni Suki Bhaji</li>
+                        </ul>
+                        <div class="price">₹200 per person</div>
+                    </div>
+                </div>
+
+                <!-- Thursday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Thursday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1626100846466-adadb2639c28?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rice and Dal">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Rice and Dal</li>
+                            <li><i class="fas fa-chevron-right"></i> Sak</li>
+                            <li><i class="fas fa-chevron-right"></i> Roti (5)</li>
+                        </ul>
+                        <div class="price">₹150 per person</div>
+                    </div>
+                </div>
+
+                <!-- Friday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Friday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Biryani">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Biryani</li>
+                            <li><i class="fas fa-chevron-right"></i> Vaghareli Kichdi and Kadi (Kathiyavadi)</li>
+                        </ul>
+                        <div class="price">₹120 per person and dish</div>
+                    </div>
+                </div>
+
+                <!-- Saturday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Saturday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Chicken Curry">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Chicken Angra or Chicken Sak</li>
+                            <li><i class="fas fa-chevron-right"></i> Roti (5)</li>
+                            <li><i class="fas fa-chevron-right"></i> Rice</li>
+                        </ul>
+                        <div class="price">₹150 per person</div>
+                    </div>
+                </div>
+
+                <!-- Sunday -->
+                <div class="menu-card fade-in">
+                    <div class="menu-day">Sunday</div>
+                    <div class="menu-content">
+                        <div class="dish-3d">
+                            <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Fish Curry">
+                        </div>
+                        <h3>Main Dishes</h3>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i> Fry Fish or Gravy Fish</li>
+                            <li><i class="fas fa-chevron-right"></i> Rice</li>
+                            <li><i class="fas fa-chevron-right"></i> Roti (5)</li>
+                        </ul>
+                        <div class="price">₹300 per person</div>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="Panner.jpg" alt="Paneer Tikka">
-                <h3>Paneer Tikka Masala</h3>
-                <span>$9</span>
+            <div class="menu-cta">
+                <a href="#order-form" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt"></i> Order Online Now
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For orders & inquiries, reach us via email.</p>
-        <button class="btn" onclick="window.location.href='mailto:vhoratanvir1610@gmail.com'">Email Us</button>
+    <!-- How to Order Section -->
+    <section id="how-to-order" class="how-to-order">
+        <div class="container">
+            <div class="how-to-order-content">
+                <h2 class="fade-in">How to Order</h2>
+                <div class="order-steps">
+                    <div class="order-step fade-in">
+                        <div class="step-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Call Us</h3>
+                            <p>Call us at <strong>+91 9601682609</strong> to place your order.</p>
+                        </div>
+                    </div>
+                    <div class="order-step fade-in">
+                        <div class="step-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Order Online</h3>
+                            <p>Fill out our <a href="#order-form">online order form</a> to place your order quickly and easily.</p>
+                        </div>
+                    </div>
+                    <div class="order-step fade-in">
+                        <div class="step-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Order in Advance</h3>
+                            <p>Please call or order online at least <strong>2 hours before</strong> for regular and extra orders.</p>
+                        </div>
+                    </div>
+                    <div class="order-step fade-in">
+                        <div class="step-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Pickup Location</h3>
+                            <p>Collect your tiffin from:</p>
+                            <p><strong>B-33, Vahora Society, Vasad Cross, Borsad</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="important-notes fade-in">
+                <h3>Important Notes</h3>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> We do not offer delivery services. Customers must pick up their tiffin.</li>
+                    <li><i class="fas fa-chevron-right"></i> For extra orders or special requests, please call us 2 hours in advance.</li>
+                    <li><i class="fas fa-chevron-right"></i> Payment can be made at the time of pickup.</li>
+                    <li><i class="fas fa-chevron-right"></i> Weekly and monthly subscription plans are available. Call for details.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
+    <!-- Order Form Section -->
+    <section id="order-form" class="order-form">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Place Your Order</h2>
+                <p class="fade-in">Fill out the form below to place your tiffin order. We'll confirm your order via phone call.</p>
+            </div>
+            <form id="tiffin-order-form" class="fade-in">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (Optional)</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    <small>We'll send your order confirmation to this email.</small>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="day">Menu Day</label>
+                        <select id="day" name="day" required>
+                            <option value="" disabled selected>Select day</option>
+                            <option value="monday">Monday - Vegetable Pulao (₹100)</option>
+                            <option value="tuesday">Tuesday - Paneer Sak & Paratha (₹250)</option>
+                            <option value="wednesday">Wednesday - Chole Bhature (₹200)</option>
+                            <option value="thursday">Thursday - Rice, Dal & Roti (₹150)</option>
+                            <option value="friday-biryani">Friday - Biryani (₹120)</option>
+                            <option value="friday-kichdi">Friday - Vaghareli Kichdi and Kadi (₹120)</option>
+                            <option value="saturday">Saturday - Chicken & Roti (₹150)</option>
+                            <option value="sunday">Sunday - Fish with Rice & Roti (₹300)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="persons">Number of Persons</label>
+                        <input type="number" id="persons" name="persons" min="1" max="50" value="1" required>
+                        <small>How many tiffins do you need?</small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Pickup Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Pickup Time</label>
+                        <select id="time" name="time" required>
+                            <option value="" disabled selected>Select time</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                        </select>
+                        <small>Please arrive on time to collect your order.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Special Instructions (Optional)</label>
+                    <textarea id="instructions" name="instructions" placeholder="Any dietary restrictions or special requests?"></textarea>
+                </div>
+                <div class="form-notes">
+                    <p><strong>Important Notes:</strong></p>
+                    <ul>
+                        <li>• Orders must be placed at least 2 hours in advance.</li>
+                        <li>• We'll call you to confirm your order.</li>
+                        <li>• Payment is to be made at the time of pickup.</li>
+                        <li>• Pickup address: B-33, Vahora Society, Vasad Cross, Borsad.</li>
+                    </ul>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-paper-plane"></i> Submit Order
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in">Contact Us</h2>
+                <p class="fade-in">Have questions or want to place an order? Get in touch with us.</p>
+            </div>
+            <div class="contact-card fade-in">
+                <h3>Contact Information</h3>
+                <p>Reach out to us for orders and inquiries</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p>+91 9601682609</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="label">Address</p>
+                            <p>B-33, Vahora Society, Vasad Cross, Borsad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p class="label">Business Hours</p>
+                            <p>Monday to Sunday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-buttons">
+                    <a href="tel:+919601682609" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="#order-form" class="btn btn-outline">
+                        <i class="fas fa-calendar-alt"></i> Order Online
+                    </a>
+                </div>
+            </div>
+            <div class="map-container fade-in">
+                <h3>Our Location</h3>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0371611466!2d72.89975!3d22.5846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e50c933cbe0a9%3A0x7b5e4e3a4d7a31c0!2sVasad%20Cross%20Rd%2C%20Borsad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1715613000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Home Tiffin Service. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>HomeTiffin</h3>
+                    <p>Providing delicious home-style meals since 2020. Our tiffin service offers a variety of dishes that change daily.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Weekly Menu</a></li>
+                        <li><a href="#how-to-order">How to Order</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#order-form">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> +91 9601682609</p>
+                    <p><i class="fas fa-map-marker-alt"></i> B-33, Vahora Society, Vasad Cross, Borsad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HomeTiffin. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <!-- Order Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Submitted Successfully!</h2>
+            <p>We'll call you shortly to confirm your order.</p>
+            <p>Thank you for choosing HomeTiffin!</p>
+            <button class="btn btn-primary modal-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
 </html>
